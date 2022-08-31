@@ -1,3 +1,16 @@
+let isModalOpen = false
+let contrastToggle = false
+
+function toggleContrast(){
+    contrastToggle = !contrastToggle
+    if (contrastToggle) {
+        document.body.classList += " dark-mode"
+    }
+    else{
+        document.body.classList.remove("dark-mode")
+    }
+}
+
 function contact(event){
     event.preventDefault()
     const loading = document.querySelector('.modal__overlay--loading')
@@ -21,7 +34,6 @@ function contact(event){
 
 }
 
-let isModalOpen = false
 function toggleModal(){
     isModalOpen = !isModalOpen
     if (isModalOpen){
