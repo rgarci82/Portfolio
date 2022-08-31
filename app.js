@@ -20,3 +20,12 @@ function contact(event){
         })
 
 }
+
+let isModalOpen = false
+function toggleModal(){
+    isModalOpen = !isModalOpen
+    if (isModalOpen){
+        return document.body.classList.remove("modal__open")
+    }
+    document.body.classList += (" modal__open")
+}
